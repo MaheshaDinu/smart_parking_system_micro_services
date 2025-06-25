@@ -1,6 +1,6 @@
 🚕🚓🚗 **Smart Parking Management System (SPMS)**  
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/58579519-1c62-4e45-8021-9daf9d9bf587" alt="Eureka Dashboard" width="80%"/>
+  <img src="https://github.com/MaheshaDinu/smart_parking_system_micro_services/blob/main/doc/localhost_8761_.png" alt="Eureka Dashboard" width="80%"/>
 </p>
 
 ---
