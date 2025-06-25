@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "b44f2e30-ebf7-4694-8910-e8ae3153e6b4",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40347626"
+	},
+	"item": [
+		{
+			"name": "UserService",
+			"item": [
+				{
+					"name": "save-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"u_id\": 0,\r\n    \"name\": \"Mahesha\",\r\n    \"contact\":\"0771234567\",\r\n    \"address\":\"Galle\",\r\n    \"email\":\"maheshadinu@gmail.com\",\r\n    \"role\":\"ADMIN\",\r\n    \"password\":\"Admin@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/user-service/api/v1/user/register"
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/user-service/api/v1/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"maheshadinu@gmail.com\",\r\n    \"password\":\"Admin@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/user-service/api/v1/auth/authenticate"
+					},
+					"response": []
+				},
+				{
+					"name": "get All users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/user-service/api/v1/user/get"
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"u_id\": 1,\r\n    \"username\": \"nadun\",\r\n    \"email\":\"new_email@example.com\",\r\n    \"role\":\"CLIENT\",\r\n    \"password\":\"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/user-service/api/v1/user/update"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VehicleService",
+			"item": [
+				{
+					"name": "saveVehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"licensePlate\": \"ABC-1234\",\r\n    \"type\": \"Car\",\r\n    \"status\": \"WAITING\",\r\n     \"userId\": 2,\r\n     \"entryTime\": \"2025-06-19T10:30:00\",\r\n     \"exitTime\": \"2025-06-19T12:45:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8083/api/vehicles/register"
+					},
+					"response": []
+				},
+				{
+					"name": "get All Vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8083/api/vehicles"
+					},
+					"response": []
+				},
+				{
+					"name": "update vehicle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"licensePlate\": \"ABC-1234\",\r\n    \"type\": \"Car\",\r\n    \"status\": \"WAITING\",\r\n    \"userId\": 2,\r\n    \"entryTime\": \"2025-06-19T10:30:00\",\r\n    \"exitTime\": \"2025-06-19T12:45:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8083/api/vehicles/2"
+					},
+					"response": []
+				},
+				{
+					"name": "delete vehicle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8083/api/vehicles/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get vehicle by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8083/api/vehicles/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "parking service",
+			"item": [
+				{
+					"name": "Parking Space Entities",
+					"item": [
+						{
+							"name": "save parking space",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"location\": \"Galle\",\r\n    \"ownerId\": 3,\r\n    \"status\": \"AVAILABLE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8084/api/parking-spaces/register"
+							},
+							"response": []
+						},
+						{
+							"name": "get all parking spaces",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8084/api/parking-spaces"
+							},
+							"response": []
+						},
+						{
+							"name": "update parking spaces",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8084/api/parking-spaces/1/status?status=OCCUPIED",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"parking-spaces",
+										"1",
+										"status"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "OCCUPIED"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete parking spaces",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8084/api/parking-spaces/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Parking Space Details",
+					"item": [
+						{
+							"name": "save parking details",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"numberPlate\": \"CAX-1234\",\r\n    \"entryTime\": \"2025-06-22T08:30:00\",\r\n    \"exitTime\": \"2025-06-22T10:00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8084/api/parking-spaces/details/2/details"
+							},
+							"response": []
+						},
+						{
+							"name": "get parking details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8084/api/parking-spaces/details/1/details"
+							},
+							"response": []
+						},
+						{
+							"name": "update parking details",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"numberPlate\": \"CAX-1234\",\r\n     \"entryTime\": \"2025-06-22T08:30:00\",\r\n     \"exitTime\": \"2025-06-22T10:30:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8084/api/parking-spaces/details/1/details/3"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "payment Service",
+			"item": [
+				{
+					"name": "save payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"vehicleId\": 2,\r\n     \"parkingDetailsId\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/api/payments"
+					},
+					"response": []
+				},
+				{
+					"name": "get all payments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8085/api/payments"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
