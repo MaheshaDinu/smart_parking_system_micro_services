@@ -97,7 +97,7 @@ mvn spring-boot:run
 🎉 Testing with Postman
 Import the provided Postman collection to hit all endpoints via the API Gateway:
 
-smart_parking_system_miccroservices.postman_collection.json
+[PostMan Collection](./smart_parking_system_miccroservices.postman_collection.json)
 
 
 
